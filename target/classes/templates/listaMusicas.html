@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head> 
+        <title>Getting Started: Handling Form Submission</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div align='center' class='card'>
+            <h1 class='text-muted'>Musicas</h1>
+            <p th:text="'Nome: ' + ${musica.nome}" />
+            <p th:text="'Artista: ' + ${musica.artista}" />
+            <p th:text="'Gênero: ' + ${musica.genero}" />
+            <p th:text="'Ano: ' + ${musica.ano}" />
+            <a href="/musica" style='text-decoration: none'>Adicionar outra Música</a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head> 
+        <title>Cadastro de Músicas</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div align='center' class='col-mt-4'>
+            <h1 class='text-muted'>Musicas</h1>
+            <form action="#" th:action="@{/musica}" th:object="${musica}" method="post">
+
+                <div class='col-md-5 mb-2'>
+                    <input name="artista"  th:field="*{artista}" title="Nome do Artista" type="text" class="form-control" id="artista" placeholder="Nome do Artista" value="" maxlength ="70" required>
+                </div>
+                <div class='col-md-5 mb-2'>
+                    <input name="nome"  th:field="*{nome}" title="Nome da Música" type="text" class="form-control" id="artista" placeholder="Nome da Música" value="" maxlength ="70" required>
+                </div>
+                <div class='col-md-5 mb-2'>
+                    <select th:field="*{genero}" name = "genero" class="custom-select d-block w-100" id="genero"  required>
+                        <option value='Rap'>Rap</option>
+                        <option value='Rock'>Rock</option>
+                        <option value='Hip-Hop'>Hip-Hop</option>
+                        <option value='Raggae'>Raggae</option>
+                        <option value='Funk'>Funk</option>
+                        <option value='Soul'>Soul</option>
+                    </select>
+                </div>
+                <div class='col-md-5 mb-2'>
+                    <input name="ano"  th:field="*{ano}" title="Ano da Música" type="number" class="form-control" id="ano" placeholder="Ano da Música" value="" maxlength ="70" required>
+                </div>
+                <p><input type="submit" value="Enviar" />
+                    <input type="reset" value="Limpar" /></p>
+            </form>
+        </div>
+    </body>
+</html>
