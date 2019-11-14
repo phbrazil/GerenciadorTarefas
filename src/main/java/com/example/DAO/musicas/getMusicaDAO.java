@@ -15,24 +15,22 @@ import org.hibernate.cfg.Configuration;
  *
  * @author paulo.bezerra
  */
-public class deleteMusicaDAO {
-
-    public boolean deleteMusica(musica musica) {
-
-        //GRAVAR NO BANCO
-        //indica as configuracoes do banco
-        //PODE SER USAR MAIS DE UMA CLASSE SEPARANDO POR VIRGULAS NO tbPauta.class,tb...
+public class getMusicaDAO {
+    
+    public musica getMusica(int id){
+        
+                //indica as configuracoes do banco
         Configuration con = new Configuration().configure().addAnnotatedClass(musica.class);
         SessionFactory sf = con.buildSessionFactory();
 
         //abre sessao com o banco
         Session session = sf.openSession();
-
+        musica musica;
         try {
 
-            //inicia a transacao com o banco
             Transaction tx = session.beginTransaction();
-            session.delete(musica);
+
+            musica = (musica) session.get(musica.class, id);
 
             //comita as informacoes
             tx.commit();
@@ -42,10 +40,10 @@ public class deleteMusicaDAO {
                 session.close();
                 sf.close();
             }
+
         }
-        
-        return  true;
 
+        return musica;
     }
-
+    
 }

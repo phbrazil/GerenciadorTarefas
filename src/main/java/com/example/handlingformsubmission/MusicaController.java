@@ -1,6 +1,8 @@
 package com.example.handlingformsubmission;
 
 import com.example.DAO.musicas.addMusicaDAO;
+import com.example.DAO.musicas.deleteMusicaDAO;
+import com.example.DAO.musicas.getMusicaDAO;
 import com.example.DAO.musicas.listMusicas;
 import com.example.Model.musica;
 import java.util.List;
@@ -54,8 +56,17 @@ public class MusicaController {
     public String deleteMusica(@ModelAttribute musica musica, Model musicas) {
         
         System.out.println("Deleting musica");
-        System.out.println(musica);
-
+        
+        //PEGAR A MUSICA NO BANCO PELO ID
+        getMusicaDAO get = new getMusicaDAO();
+        
+        musica = get.getMusica(musica.getId());
+        
+        // DELETAR A MUSICA
+        deleteMusicaDAO delete = new deleteMusicaDAO();
+        
+        delete.deleteMusica(musica);
+        
         listMusicas list = new listMusicas();
 
         List<musica> listMusicas = list.List();
