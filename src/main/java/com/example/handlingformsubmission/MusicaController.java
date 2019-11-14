@@ -15,30 +15,25 @@ public class MusicaController {
 
     @GetMapping("/musica")
     public String musicaForm(Model musica) {
-        musica.addAttribute("musica", new musica());
-        
-        listMusicas list = new listMusicas();
-        
-        List<musica> musicas = list.List();        
 
-        musica.addAttribute("musicas", musicas);
-        
-        for(int i = 0;i<musicas.size();i++){
-            
-            System.out.println(musicas.get(i).getNome());
-            
-        }
+        musica.addAttribute("musica", new musica());
 
         return "musica";
     }
 
     @PostMapping("/musica")
-    public String musicaSubmit(@ModelAttribute musica musica) {
-        
+    public String musicaSubmit(@ModelAttribute musica musica, Model musicas) {
+
         addMusicaDAO add = new addMusicaDAO();
-        
+
         add.addMusica(musica);
-        
+
+        listMusicas list = new listMusicas();
+
+        List<musica> listMusicas = list.List();
+
+        musicas.addAttribute("musicas", listMusicas);
+
         return "listaMusicas";
     }
 
