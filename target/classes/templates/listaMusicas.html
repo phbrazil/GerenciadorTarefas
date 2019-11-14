@@ -37,7 +37,7 @@
                         <td align='center'>
                             <form th:action="@{/deleteMusica}"  th:object="${musica}" method="post">
                                 <input type="hidden" name="id" th:value="${musica.id}" />
-                                <input type="submit" value="Delete" class="btn btn-danger" />
+                                <input onclick="return confirm('Quer mesmo deletar?');" type="submit" value="Delete" class="btn btn-danger" />
                             </form>
                         </td>
 
