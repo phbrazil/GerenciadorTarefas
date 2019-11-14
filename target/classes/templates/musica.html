@@ -7,7 +7,7 @@
     </head>
     <body>
         <div align='center' class='col-mt-4'>
-            <h1 class='text-muted'>Projetos</h1>
+            <h1 class='text-muted'>Musicas</h1>
             <form action="#" th:action="@{/musica}" th:object="${musica}" method="post">
 
                 <div class='col-md-5 mb-2'>
@@ -29,10 +29,10 @@
                 <div class='col-md-5 mb-2'>
                     <input name="ano"  th:field="*{ano}" title="Ano da Música" type="number" class="form-control" id="ano" placeholder="Ano da Música" value="" maxlength ="70" required>
                 </div>
-                <p><input type="submit" value="Enviar" />
-                    <input type="reset" value="Limpar" /></p>
+                <p><input type="submit" value="Enviar" class='btn btn-success' />
+                    <input type="reset" value="Limpar"  class='btn btn-danger'/></p>
             </form>
-            <a href="/list" style='text-decoration: none'>Ver Projetos</a>
+            <a href="/list" style='text-decoration: none'>Ver Músicas</a>
 
         </div>
     </body>
