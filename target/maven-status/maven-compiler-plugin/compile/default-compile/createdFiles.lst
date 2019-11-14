@@ -3,6 +3,7 @@ com\example\Model\exceptions\IllegalOrphanException.class
 com\example\handlingformsubmission\HandlingFormSubmissionApplication.class
 com\example\Model\musica.class
 com\example\DAO\musicas\addMusicaDAO.class
+com\example\DAO\musicas\getMusicaDAO.class
 com\example\DAO\musicas\deleteMusicaDAO.class
 com\example\Model\exceptions\PreexistingEntityException.class
 com\example\handlingformsubmission\MusicaController.class
