@@ -1,7 +1,7 @@
 package com.example.handlingformsubmission;
 
-import com.example.DAO.addMusica.addMusicaDAO;
-import com.example.DAO.addMusica.listMusicas;
+import com.example.DAO.musicas.addMusicaDAO;
+import com.example.DAO.musicas.listMusicas;
 import com.example.Model.musica;
 import java.util.List;
 import org.springframework.stereotype.Controller;
@@ -40,6 +40,21 @@ public class MusicaController {
         addMusicaDAO add = new addMusicaDAO();
 
         add.addMusica(musica);
+
+        listMusicas list = new listMusicas();
+
+        List<musica> listMusicas = list.List();
+
+        musicas.addAttribute("musicas", listMusicas);
+
+        return "listaMusicas";
+    }
+
+    @PostMapping("/deleteMusica")
+    public String deleteMusica(@ModelAttribute musica musica, Model musicas) {
+
+        System.out.println("Deleting musica");
+        System.out.println(musica);
 
         listMusicas list = new listMusicas();
 
