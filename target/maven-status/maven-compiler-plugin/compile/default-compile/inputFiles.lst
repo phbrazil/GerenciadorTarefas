@@ -1,3 +1,8 @@
+C:\Users\paulo.bezerra\Documents\NetBeansProjects\Musicas\src\main\java\com\example\DAO\addMusica\addMusicaDAO.java
+C:\Users\paulo.bezerra\Documents\NetBeansProjects\Musicas\src\main\java\com\example\Model\exceptions\IllegalOrphanException.java
 C:\Users\paulo.bezerra\Documents\NetBeansProjects\Musicas\src\main\java\com\example\handlingformsubmission\MusicaController.java
 C:\Users\paulo.bezerra\Documents\NetBeansProjects\Musicas\src\main\java\com\example\handlingformsubmission\HandlingFormSubmissionApplication.java
-C:\Users\paulo.bezerra\Documents\NetBeansProjects\Musicas\src\main\java\com\example\handlingformsubmission\Musica.java
+C:\Users\paulo.bezerra\Documents\NetBeansProjects\Musicas\src\main\java\com\example\Model\musicaJpaController.java
+C:\Users\paulo.bezerra\Documents\NetBeansProjects\Musicas\src\main\java\com\example\Model\exceptions\NonexistentEntityException.java
+C:\Users\paulo.bezerra\Documents\NetBeansProjects\Musicas\src\main\java\com\example\Model\exceptions\PreexistingEntityException.java
+C:\Users\paulo.bezerra\Documents\NetBeansProjects\Musicas\src\main\java\com\example\Model\musica.java
