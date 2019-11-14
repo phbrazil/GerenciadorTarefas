@@ -67,6 +67,7 @@ public class MusicaController {
         
         delete.deleteMusica(musica);
         
+        //BUSCAR LISTA ATUALIZADA        
         listMusicas list = new listMusicas();
 
         List<musica> listMusicas = list.List();
