@@ -1,7 +1,9 @@
 package com.example.handlingformsubmission;
 
 import com.example.DAO.addMusica.addMusicaDAO;
+import com.example.DAO.addMusica.listMusicas;
 import com.example.Model.musica;
+import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,9 +14,21 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class MusicaController {
 
     @GetMapping("/musica")
-    public String musicaForm(Model model) {
-        model.addAttribute("musica", new musica());
-        System.out.println("to aqui");
+    public String musicaForm(Model musica) {
+        musica.addAttribute("musica", new musica());
+        
+        listMusicas list = new listMusicas();
+        
+        List<musica> musicas = list.List();        
+
+        musica.addAttribute("musicas", musicas);
+        
+        for(int i = 0;i<musicas.size();i++){
+            
+            System.out.println(musicas.get(i).getNome());
+            
+        }
+
         return "musica";
     }
 

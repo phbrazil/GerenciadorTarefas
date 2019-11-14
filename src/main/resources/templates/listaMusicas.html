@@ -15,5 +15,14 @@
             <p th:text="'Ano: ' + ${musica.ano}" />
             <a href="/musica" style='text-decoration: none'>Adicionar outra Música</a>
         </div>
+        <div align='center' class='card'>
+
+            <table>
+                <tr th:each="musica: ${musicas}">
+                    <td th:text="${musica.nome}" />
+                    <td th:text="${musica.artista}" />
+                </tr>
+            </table>
+        </div>
     </body>
 </html>
