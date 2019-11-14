@@ -1,0 +1,9 @@
+com\example\Model\exceptions\IllegalOrphanException.class
+com\example\handlingformsubmission\HandlingFormSubmissionApplication.class
+com\example\Model\musica.class
+com\example\DAO\addMusica\addMusicaDAO.class
+com\example\DAO\addMusica\listMusicas.class
+com\example\Model\exceptions\PreexistingEntityException.class
+com\example\handlingformsubmission\MusicaController.class
+com\example\Model\musicaJpaController.class
+com\example\Model\exceptions\NonexistentEntityException.class

@@ -13,6 +13,19 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class MusicaController {
 
+    @GetMapping("/list")
+    public String listMusicas(Model musicas, Model musica) {
+
+        listMusicas list = new listMusicas();
+
+        List<musica> listMusicas = list.List();
+
+        musicas.addAttribute("musicas", listMusicas);
+        musicas.addAttribute("musica", new musica());
+
+        return "listaMusicas";
+    }
+
     @GetMapping("/musica")
     public String musicaForm(Model musica) {
 
