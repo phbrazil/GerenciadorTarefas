@@ -52,7 +52,7 @@ public class MusicaController {
 
     @PostMapping("/deleteMusica")
     public String deleteMusica(@ModelAttribute musica musica, Model musicas) {
-
+        
         System.out.println("Deleting musica");
         System.out.println(musica);
 
