@@ -7,9 +7,8 @@
     </head>
     <body class='mb-2'>
         <div align='center' class='col-mt-4'>
-            <h1 class='text-muted'>Tarefas</h1>
+            <h1 class='text-muted mt-4'>Tarefas</h1>
             <form action="#" th:action="@{/tarefa}" th:object="${tarefa}" method="post">
-
                 <div class='col-md-5 mb-2'>
                     <input name="responsavel"  th:field="*{responsavel}" title="Nome do Responsável" type="text" class="form-control" id="responsavel" placeholder="Nome do Responsável" value="" maxlength ="70" required>
                 </div>
@@ -39,4 +38,5 @@
 
         </div>
     </body>
+
 </html>

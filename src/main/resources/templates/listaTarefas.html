@@ -48,11 +48,64 @@
                                         <input onclick="return confirm('Quer mesmo deletar?');" type="submit" value="Delete" class="btn btn-danger" />
                                     </form>
                                 </div>
+                                <div class='mb-2'>
+                                    <button type="button" class="btn mb-1 btn-info text-white" data-toggle="modal" data-target="#modalEdit">
+                                        Editar
+                                    </button>
+                                </div>
                             </div>
                         </td>
                     </tr>
                 </tbody>
             </table>
+
+            <div class="modal fade" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <!--Content-->
+                    <div class="modal-content">
+                        <!--Header-->
+                        <div class="modal-header light-blue darken-3 white-text">
+                            <h4 class="title text-muted text-center">Finalizar tarefa</h4>                                
+                            <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <!--Body-->
+                        <div class="modal-body mb-0">
+                            <div class="col-md-12 order-md-1">
+                                <label for="form-autocomplete-1" class="active text-muted"><strong>Plataforma</strong></label>
+                                <select data-toggle="tooltip" autofocus title="" type="text" autocomplete="off" class="selectpicker show-menu-arrow show-tick d-block w-100 needs-validation" required='true' data-width="auto" data-live-search="true" data-size="5" id="platform" name="platform" maxlength="70">
+                                    <option>Computador</option>
+                                    <option>Celular</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12 order-md-1">
+                                <label for="form-autocomplete-1" class="active text-muted"><strong>Tipo de feedback</strong></label>
+                                <select data-toggle="tooltip" autofocus title="" type="text" autocomplete="off" class="selectpicker show-menu-arrow show-tick d-block w-100 needs-validation" required='true' data-width="auto" data-live-search="true" data-size="5" id="type" name="type" maxlength="70">
+                                    <option>Sugestão</option>
+                                    <option>Crítica</option>
+                                    <option>Reclamação</option>
+                                    <option>Dúvidas</option>
+                                    <option>Elogio</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12 order-md-1">
+                                <div class="form-group col-xs-12 floating-label-form-group controls">
+                                    <label><strong>Mensagem</strong></label>
+                                    <textarea  maxlength="450" rows="5" class="form-control" name='message' placeholder="Mensagem" id="message" required data-validation-required-message="Favor inserir sua mensagem."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="form-group col-xs-12" align='center'>
+                                <button type="submit" class="btn btn-outline-dark">Atualizar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.Content-->
+                </div>
+            </div>
+
             <div class='col-md-12'>
                 <div class='row'>
                     <div class='col-md-5'>
@@ -62,4 +115,7 @@
             </div>
         </div>
     </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </html>
