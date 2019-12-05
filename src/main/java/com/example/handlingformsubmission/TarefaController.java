@@ -118,6 +118,8 @@ public class TarefaController {
     public String editTarefa(@ModelAttribute tarefa tarefa, Model tarefas) {
 
         System.out.println("Editando tarefa");
+        
+        System.out.println("Novo nome: "+tarefa.getNome());
 
         //BUSCAR LISTA ATUALIZADA        
         listTarefas list = new listTarefas();
