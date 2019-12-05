@@ -126,32 +126,28 @@
                         </div>
                         <!--Body-->
                         <div class="modal-body mb-0">
+
                             <div class="col-md-12 order-md-1">
-                                <label for="form-autocomplete-1" class="active text-muted"><strong>Plataforma</strong></label>
-                                <select data-toggle="tooltip" autofocus title="" type="text" autocomplete="off" class="selectpicker show-menu-arrow show-tick d-block w-100 needs-validation" required='true' data-width="auto" data-live-search="true" data-size="5" id="platform" name="platform" maxlength="70">
-                                    <option>Computador</option>
-                                    <option>Celular</option>
+                                <label for="form-autocomplete-1" class="active text-muted"><strong>Selecione a nota</strong></label>
+                                <select data-toggle="tooltip" autofocus title="" type="text" autocomplete="off" class="selectpicker show-menu-arrow show-tick d-block w-100 needs-validation" required='true' data-width="auto" data-live-search="true" data-size="5" id="nota" name="nota" maxlength="70">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
                                 </select>
                             </div>
-                            <div class="col-md-12 order-md-1">
-                                <label for="form-autocomplete-1" class="active text-muted"><strong>Tipo de feedback</strong></label>
-                                <select data-toggle="tooltip" autofocus title="" type="text" autocomplete="off" class="selectpicker show-menu-arrow show-tick d-block w-100 needs-validation" required='true' data-width="auto" data-live-search="true" data-size="5" id="type" name="type" maxlength="70">
-                                    <option>Sugestão</option>
-                                    <option>Crítica</option>
-                                    <option>Reclamação</option>
-                                    <option>Dúvidas</option>
-                                    <option>Elogio</option>
-                                </select>
-                            </div>
-                            <div class="col-md-12 order-md-1">
-                                <div class="form-group col-xs-12 floating-label-form-group controls">
-                                    <label><strong>Mensagem</strong></label>
-                                    <textarea  maxlength="450" rows="5" class="form-control" name='message' placeholder="Mensagem" id="message" required data-validation-required-message="Favor inserir sua mensagem."></textarea>
-                                    <p class="help-block text-danger"></p>
-                                </div>
+
+                            <div class="form-group col-xs-12" align='center'>
+                                <button type="submit" class="btn btn-outline-dark">Sim</button>
                             </div>
                             <div class="form-group col-xs-12" align='center'>
-                                <button type="submit" class="btn btn-outline-dark">Atualizar</button>
+                                <button type="submit" class="btn btn-outline-dark btn-danger">Não</button>
                             </div>
                         </div>
                     </div>
