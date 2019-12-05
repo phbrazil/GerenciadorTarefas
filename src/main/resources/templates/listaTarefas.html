@@ -9,6 +9,8 @@
     <body>
         <div th:if="${result == 'Tarefa iniciada'}" class='alert alert-success'>Tarefa iniciada
         </div>
+        <div th:if="${result == 'Tarefa deletada'}" class='alert alert-danger'>Tarefa deletada
+        </div>
         <div align="center" class="mb-2 mt-4">
             <table class="table-striped table-bordered table-hover" style="width: 90%" cellspacing="0">
                 <thead>
@@ -51,7 +53,13 @@
                     </tr>
                 </tbody>
             </table>
-            <a href="/tarefa" class="mt-4 mb-2" style='text-decoration: none'>Adicionar nova Tarefa</a>
+            <div class='col-md-12'>
+                <div class='row'>
+                    <div class='col-md-5'>
+                        <a class='btn btn-lg btn-success mt-4' href="/tarefa" style='text-decoration: none'>Adicionar nova Tarefa</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>

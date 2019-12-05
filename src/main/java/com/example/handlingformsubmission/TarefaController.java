@@ -77,6 +77,8 @@ public class TarefaController {
 
         List<tarefa> listTarefas = list.List();
 
+        tarefas.addAttribute("result", "Tarefa deletada");
+
         tarefas.addAttribute("tarefas", listTarefas);
 
         return "listaTarefas";
@@ -96,15 +98,15 @@ public class TarefaController {
         iniciarTarefaDAO iniciar = new iniciarTarefaDAO();
 
         int result = iniciar.iniciarTarefa(tarefa);
-        
+
         System.out.println(result);
 
         //BUSCAR LISTA ATUALIZADA        
         listTarefas list = new listTarefas();
 
         List<tarefa> listTarefas = list.List();
-        
-        tarefas.addAttribute("result","Tarefa iniciada");
+
+        tarefas.addAttribute("result", "Tarefa iniciada");
 
         tarefas.addAttribute("tarefas", listTarefas);
 
