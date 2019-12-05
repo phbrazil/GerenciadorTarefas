@@ -11,7 +11,7 @@
             <form action="#" th:action="@{/tarefa}" th:object="${tarefa}" method="post">
 
                 <div class='col-md-5 mb-2'>
-                    <input name="responsavel"  th:field="*{responsavel}" title="Nome do Responsável" type="text" class="form-control" id="responsavel" placeholder="Nome do Artista" value="" maxlength ="70" required>
+                    <input name="responsavel"  th:field="*{responsavel}" title="Nome do Responsável" type="text" class="form-control" id="responsavel" placeholder="Nome do Responsável" value="" maxlength ="70" required>
                 </div>
                 <div class='col-md-5 mb-2'>
                     <input name="nome"  th:field="*{nome}" title="Nome da Tarefa" type="text" class="form-control" id="artista" placeholder="Nome da Tarefa" value="" maxlength ="70" required>
@@ -28,6 +28,9 @@
                 </div>
                 <div class='col-md-5 mb-2'>
                     <input name="datafim"  th:field="*{datafim}" title="Fim Tarefa" type="date" class="form-control" id="datafim" placeholder="Fim da Tarefa" value="" maxlength ="70" required>
+                </div>
+                <div class='col-md-5 mb-2'>
+                    <textarea name="descricao"  th:field="*{descricao}" title="Descrição" type="text" class="form-control" id="descricao" placeholder="Descrição da tarefa" value="" maxlength ="200" required></textarea>
                 </div>
                 <p><input type="submit" value="Enviar" class='btn btn-success' />
                     <input type="reset" value="Limpar"  class='btn btn-danger'/></p>
