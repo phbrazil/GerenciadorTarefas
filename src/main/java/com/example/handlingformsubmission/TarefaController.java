@@ -51,7 +51,7 @@ public class TarefaController {
         List<tarefa> listTarefas = list.List();
 
         //redirectAttrs.addAttribute("tarefas", listTarefas);
-        tarefas.addAttribute("result","Nova tarefa adicionada");
+        tarefas.addAttribute("result", "Nova tarefa adicionada");
         tarefas.addAttribute("tarefas", listTarefas);
 
         return "listaTarefas";
@@ -108,6 +108,23 @@ public class TarefaController {
         List<tarefa> listTarefas = list.List();
 
         tarefas.addAttribute("result", "Tarefa iniciada");
+
+        tarefas.addAttribute("tarefas", listTarefas);
+
+        return "listaTarefas";
+    }
+
+    @PostMapping("/editTarefa")
+    public String editTarefa(@ModelAttribute tarefa tarefa, Model tarefas) {
+
+        System.out.println("Editando tarefa");
+
+        //BUSCAR LISTA ATUALIZADA        
+        listTarefas list = new listTarefas();
+
+        List<tarefa> listTarefas = list.List();
+
+        tarefas.addAttribute("result", "Tarefa atualizada");
 
         tarefas.addAttribute("tarefas", listTarefas);
 
