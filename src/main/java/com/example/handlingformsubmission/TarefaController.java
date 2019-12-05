@@ -31,7 +31,7 @@ public class TarefaController {
     }
 
     @GetMapping("/tarefa")
-    public String rerefaForm(Model tarefa) {
+    public String tarefaForm(Model tarefa) {
 
         tarefa.addAttribute("tarefa", new tarefa());
 
@@ -51,6 +51,7 @@ public class TarefaController {
         List<tarefa> listTarefas = list.List();
 
         //redirectAttrs.addAttribute("tarefas", listTarefas);
+        tarefas.addAttribute("result","Nova tarefa adicionada");
         tarefas.addAttribute("tarefas", listTarefas);
 
         return "listaTarefas";
