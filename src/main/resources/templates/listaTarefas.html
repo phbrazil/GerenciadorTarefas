@@ -91,19 +91,19 @@
                                 <form action="#" th:action="@{/editTarefa}" th:object="${tarefa}" method="post">
                                     <div class='col-md-12'>
                                         <div class='col-md-5 mb-2'>
-                                            <input name="responsavel" th:value="${tarefa.responsavel}" th:field="*{responsavel}" title="Nome do Responsável" type="text" class="form-control" id="responsavel" maxlength ="70" required>
+                                            <input name="responsavel" th:value="*{responsavel}" title="Nome do Responsável" type="text" class="form-control" id="responsavel" maxlength ="70" required>
                                         </div>
                                         <div class='col-md-5 mb-2'>
-                                            <input name="nome"  th:field="*{nome}" title="Nome da Tarefa" type="text" class="form-control" id="artista" placeholder="Nome da Tarefa" value="" maxlength ="70" required>
+                                            <input name="nome" th:value="*{nome}"  title="Nome da Tarefa" type="text" class="form-control" id="artista" placeholder="Nome da Tarefa" value="" maxlength ="70" required>
                                         </div>
                                         <div class='col-md-5 mb-2'>
-                                            <input name="datainicio"  th:field="*{datainicio}" title="Inicio Tarefa" type="date" class="form-control" id="datainicio" placeholder="Ano da Tarefa" value="" maxlength ="70" required>
+                                            <input name="datainicio"  th:value="*{datainicio}"  title="Inicio Tarefa" type="date" class="form-control" id="datainicio" placeholder="Ano da Tarefa" value="" maxlength ="70" required>
                                         </div>
                                         <div class='col-md-5 mb-2'>
-                                            <input name="datafim"  th:field="*{datafim}" title="Fim Tarefa" type="date" class="form-control" id="datafim" placeholder="Fim da Tarefa" value="" maxlength ="70" required>
+                                            <input name="datafim"  th:value="*{datafim}"  title="Fim Tarefa" type="date" class="form-control" id="datafim" placeholder="Fim da Tarefa" value="" maxlength ="70" required>
                                         </div>
                                         <div class='col-md-5 mb-2'>
-                                            <textarea name="descricao"  th:field="*{descricao}" title="Descrição" type="text" class="form-control" id="descricao" placeholder="Descrição da tarefa" value="" maxlength ="200" required></textarea>
+                                            <textarea name="descricao"  th:value="*{descricao}" title="Descrição" type="text" class="form-control" id="descricao" placeholder="Descrição da tarefa" value="" maxlength ="200" required></textarea>
                                         </div>
                                         <p><input type="submit" value="Atualizar" class='btn btn-success' />
                                     </div>
