@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head> 
+        <title>Getting Started: Handling Form Submission</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!--div align='center' class="mb-2">
+            <h1 class='text-muted'>Tarefas</h1>
+            <p th:text="'Nome: ' + ${tarefa.nome}" />
+            <p th:text="'Descrição: ' + ${tarefa.descricao}" />
+            <p th:text="'Status: ' + ${tarefa.status}" />
+            <p th:text="'Responsável: ' + ${tarefa.responsavel}" />
+            <p th:text="'Previsão início: ' + ${tarefa.datainicio}" />
+            <p th:text="'Previsão fim: ' + ${tarefa.datafim}" />
+            <a href="/tarefa" style='text-decoration: none'>Adicionar nova Tarefa</a>
+        </div-->
+        <div align="center" class="mb-2 mt-4">
+            <table class="table-striped table-bordered table-hover" style="width: 90%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Status</th>
+                        <th>Responsável</th>
+                        <th>Previsão início</th>
+                        <th>Previsão fim</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="tarefa: ${tarefas}">
+                        <td th:text="${tarefa.id}" />
+                        <td th:text="${tarefa.nome}" />
+                        <td th:text="${tarefa.descricao}" />
+                        <td th:text="${tarefa.status}" />
+                        <td th:text="${tarefa.responsavel}" />
+                        <td th:text="${tarefa.datainicio}" />
+                        <td th:text="${tarefa.datafim}" />
+                        <td align='center'>
+                            <form th:action="@{/deleteTarefa}"  th:object="${tarefa}" method="post">
+                                <input type="hidden" name="id" th:value="${tarefa.id}" />
+                                <input onclick="return confirm('Quer mesmo deletar?');" type="submit" value="Delete" class="btn btn-danger" />
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

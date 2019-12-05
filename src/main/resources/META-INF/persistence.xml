@@ -3,7 +3,7 @@
   <persistence-unit name="Opportunity" transaction-type="JTA">
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
     <jta-data-source>java:app/mysql</jta-data-source>
-    <class>com.example.Model.musica</class>
+    <class>com.example.Model.tarefa</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.schema-generation.database.action" value="create"/>

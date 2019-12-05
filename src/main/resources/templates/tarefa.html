@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head> 
+        <title>Cadastro de Tarefas</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    </head>
+    <body class='mb-2'>
+        <div align='center' class='col-mt-4'>
+            <h1 class='text-muted'>Tarefas</h1>
+            <form action="#" th:action="@{/tarefa}" th:object="${tarefa}" method="post">
+
+                <div class='col-md-5 mb-2'>
+                    <input name="responsavel"  th:field="*{responsavel}" title="Nome do Responsável" type="text" class="form-control" id="responsavel" placeholder="Nome do Artista" value="" maxlength ="70" required>
+                </div>
+                <div class='col-md-5 mb-2'>
+                    <input name="nome"  th:field="*{nome}" title="Nome da Tarefa" type="text" class="form-control" id="artista" placeholder="Nome da Tarefa" value="" maxlength ="70" required>
+                </div>
+                <div class='col-md-5 mb-2'>
+                    <select th:field="*{status}" name = "status" class="custom-select d-block w-100" id="status"  required>
+                        <option value='Não iniciada'>Não iniciada</option>
+                        <option value='Em andamento'>Em andamento</option>
+                        <option value='Concluída'>Concluída</option>
+                    </select>
+                </div>
+                <div class='col-md-5 mb-2'>
+                    <input name="datainicio"  th:field="*{datainicio}" title="Inicio Tarefa" type="date" class="form-control" id="datainicio" placeholder="Ano da Tarefa" value="" maxlength ="70" required>
+                </div>
+                <div class='col-md-5 mb-2'>
+                    <input name="datafim"  th:field="*{datafim}" title="Fim Tarefa" type="date" class="form-control" id="datafim" placeholder="Fim da Tarefa" value="" maxlength ="70" required>
+                </div>
+                <p><input type="submit" value="Enviar" class='btn btn-success' />
+                    <input type="reset" value="Limpar"  class='btn btn-danger'/></p>
+            </form>
+            <a href="/list" style='text-decoration: none'>Ver Tarefas</a>
+
+        </div>
+    </body>
+</html>
