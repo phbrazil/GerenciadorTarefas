@@ -5,6 +5,7 @@ import com.example.DAO.tarefas.deleteTarefaDAO;
 import com.example.DAO.tarefas.getTarefaDAO;
 import com.example.DAO.tarefas.iniciarTarefaDAO;
 import com.example.DAO.tarefas.listTarefas;
+import com.example.DAO.tarefas.updateTarefaDAO;
 import com.example.Model.tarefa;
 import java.util.List;
 import org.springframework.stereotype.Controller;
@@ -120,6 +121,10 @@ public class TarefaController {
         System.out.println("Editando tarefa");
         
         System.out.println("Novo nome: "+tarefa.getNome());
+        
+        updateTarefaDAO update = new updateTarefaDAO();
+        
+        update.updateTarefa(tarefa);
 
         //BUSCAR LISTA ATUALIZADA        
         listTarefas list = new listTarefas();
