@@ -48,24 +48,24 @@
                         <td th:text="${tarefa.datafim}" />
                         <td align='center'>
                             <div class="row">
-                                <div class='mb-2'>
+                                <div th:if="${tarefa.status == 'Não iniciada'}" class='mb-2'>
                                     <form th:action="@{/iniciarTarefa}"  th:object="${tarefa}" method="post">
                                         <input type="hidden" name="id" th:value="${tarefa.id}" />
                                         <input type="submit" value="Iniciar" class="btn btn-success" />
                                     </form>
                                 </div>
-                                <div class='mb-2'>
+                                <div th:if="${tarefa.status != 'Finalizada'}" class='mb-2'>
                                     <form th:action="@{/deleteTarefa}"  th:object="${tarefa}" method="post">
                                         <input type="hidden" name="id" th:value="${tarefa.id}" />
                                         <input onclick="return confirm('Quer mesmo deletar?');" type="submit" value="Delete" class="btn btn-danger" />
                                     </form>
                                 </div>
-                                <div class='mb-2'>
+                                <div th:if="${tarefa.status != 'Finalizada'}" class='mb-2'>
                                     <button type="button" class="btn mb-1 btn-info text-white" data-toggle="modal" th:attr="data-target = '#modal'+${tarefa.id}">
                                         Editar
                                     </button>
                                 </div>
-                                <div class='mb-2'>
+                                <div th:if="${tarefa.status != 'Finalizada'}" class='mb-2'>
                                     <button type="button" class="btn mb-1 btn-success text-white" data-toggle="modal" th:attr="data-target = '#modalConcluir'+${tarefa.id}">
                                         Concluir
                                     </button>

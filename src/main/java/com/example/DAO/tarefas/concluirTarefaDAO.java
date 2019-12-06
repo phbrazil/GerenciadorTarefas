@@ -35,9 +35,10 @@ public class concluirTarefaDAO {
 
             //inicia a transacao com o banco
             Transaction tx = session.beginTransaction();
-            Query query = session.createQuery("update tarefa set nota = :nota"
+            Query query = session.createQuery("update tarefa set nota = :nota, status = :status"
                     + " where id = :id");
             query.setParameter("nota", nota);
+            query.setParameter("status", "Finalizada");
             query.setParameter("id", id);
             
             result = query.executeUpdate();
