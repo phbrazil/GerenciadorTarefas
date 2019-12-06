@@ -142,9 +142,8 @@ public class TarefaController {
     public String concluirTarefa(@ModelAttribute tarefa tarefa, Model tarefas) {
 
         System.out.println("Concluindo tarefa");
+                
         
-        System.out.println(tarefa.getNota()+"+++++++++++==");
-
         //BUSCAR LISTA ATUALIZADA        
         listTarefas list = new listTarefas();
 
