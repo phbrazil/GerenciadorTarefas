@@ -8,4 +8,5 @@ status VARCHAR(60) NOT NULL DEFAULT 'Não iniciada',
 responsavel VARCHAR(60) not null default '',
 datainicio VARCHAR(20) not null default '',
 datafim VARCHAR(20) not null default '',
+nota int default 0,
 PRIMARY KEY (id));

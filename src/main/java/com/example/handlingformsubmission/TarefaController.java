@@ -119,11 +119,11 @@ public class TarefaController {
     public String editTarefa(@ModelAttribute tarefa tarefa, Model tarefas) {
 
         System.out.println("Editando tarefa");
-        
-        System.out.println("Novo nome: "+tarefa.getNome());
-        
+
+        System.out.println("Novo nome: " + tarefa.getNome());
+
         updateTarefaDAO update = new updateTarefaDAO();
-                
+
         update.updateTarefa(tarefa);
 
         //BUSCAR LISTA ATUALIZADA        
@@ -132,6 +132,23 @@ public class TarefaController {
         List<tarefa> listTarefas = list.List();
 
         tarefas.addAttribute("result", "Tarefa atualizada");
+
+        tarefas.addAttribute("tarefas", listTarefas);
+
+        return "listaTarefas";
+    }
+
+    @PostMapping("/concluirTarefa")
+    public String concluirTarefa(@ModelAttribute tarefa tarefa, Model tarefas) {
+
+        System.out.println("Concluindo tarefa");
+
+        //BUSCAR LISTA ATUALIZADA        
+        listTarefas list = new listTarefas();
+
+        List<tarefa> listTarefas = list.List();
+
+        tarefas.addAttribute("result", "Tarefa iniciada");
 
         tarefas.addAttribute("tarefas", listTarefas);
 
