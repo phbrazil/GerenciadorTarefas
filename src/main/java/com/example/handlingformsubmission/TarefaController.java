@@ -1,6 +1,7 @@
 package com.example.handlingformsubmission;
 
 import com.example.DAO.tarefas.addTarefaDAO;
+import com.example.DAO.tarefas.concluirTarefaDAO;
 import com.example.DAO.tarefas.deleteTarefaDAO;
 import com.example.DAO.tarefas.getTarefaDAO;
 import com.example.DAO.tarefas.iniciarTarefaDAO;
@@ -142,7 +143,11 @@ public class TarefaController {
     public String concluirTarefa(@ModelAttribute tarefa tarefa, Model tarefas) {
 
         System.out.println("Concluindo tarefa");
-                
+        
+        concluirTarefaDAO concluir = new concluirTarefaDAO();
+        
+        concluir.iniciarTarefa(tarefa.getId(), tarefa.getNota());
+        
         
         //BUSCAR LISTA ATUALIZADA        
         listTarefas list = new listTarefas();
