@@ -107,6 +107,9 @@
                                         <div class='col-md-5 mb-2'>
                                             <textarea name="descricao"  th:value="*{descricao}"  th:text="*{descricao}" title="Descrição" type="text" class="form-control" id="descricao" placeholder="Descrição da tarefa" value="" maxlength ="200" required></textarea>
                                         </div>
+                                        <input name="id"  th:value="*{id}" type="hidden" id="id">
+                                        <input name="status"  th:value="*{status}" type="hidden" id="status">
+
                                         <p><input type="submit" value="Atualizar" class='btn btn-success' />
                                     </div>
                                 </form>

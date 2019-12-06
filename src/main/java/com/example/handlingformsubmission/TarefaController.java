@@ -123,7 +123,7 @@ public class TarefaController {
         System.out.println("Novo nome: "+tarefa.getNome());
         
         updateTarefaDAO update = new updateTarefaDAO();
-        
+                
         update.updateTarefa(tarefa);
 
         //BUSCAR LISTA ATUALIZADA        
