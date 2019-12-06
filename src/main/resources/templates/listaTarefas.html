@@ -21,6 +21,8 @@
         </div>
         <div th:if="${result == 'Tarefa atualizada'}" class='alert alert-success'>Tarefa atualizada com sucesso
         </div>
+        <div th:if="${result == 'Tarefa concluída'}" class='alert alert-success'>Tarefa concluída
+        </div>
         <div align="center" class="mb-2 mt-4">
             <table class="table-striped table-bordered table-hover" style="width: 90%" cellspacing="0">
                 <thead>
@@ -144,16 +146,16 @@
                                             <div class="col-md-4 order-md-1">
                                                 <label for="form-autocomplete-1" class="active text-muted"><strong>Selecione a nota</strong></label>
                                                 <select th:field="*{nota}"  data-toggle="tooltip" autofocus title="" type="text" autocomplete="off" class="input-group form-control" required='true' data-width="auto" data-live-search="true" data-size="5" id="nota" name="nota" maxlength="70">
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                    <option>4</option>
-                                                    <option>5</option>
-                                                    <option>6</option>
-                                                    <option>7</option>
-                                                    <option>8</option>
-                                                    <option>9</option>
-                                                    <option>10</option>
+                                                    <option value='1'>1</option>
+                                                    <option value='2'>2</option>
+                                                    <option value='3'>3</option>
+                                                    <option value='4'>4</option>
+                                                    <option value='5'>5</option>
+                                                    <option value='6'>6</option>
+                                                    <option value='7'>7</option>
+                                                    <option value='8'>8</option>
+                                                    <option value='9'>9</option>
+                                                    <option value='10'>10</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -167,11 +169,12 @@
                                             </div>
                                             <div class='col-md-2 mb-2'>
                                                 <div class="form-group col-xs-12">
-                                                    <button type="submit" class="btn btn-sm btn-danger">Não</button>
+                                                    <button type="submit" class="btn btn-sm btn-danger" data-dismiss="modal">Não</button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                </form>
                             </div>
                             <!--/.Content-->
                         </div>

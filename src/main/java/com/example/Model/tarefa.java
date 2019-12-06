@@ -28,12 +28,14 @@ public class tarefa implements Serializable {
     private String responsavel;
     private String datainicio;
     private String datafim;
+    private int nota;
     
     public tarefa(){
         
     }
 
-    public tarefa(Integer id, String nome, String descricao, String status, String responsavel, String datainicio, String datafim) {
+    public tarefa(Integer id, String nome, String descricao, String status, 
+            String responsavel, String datainicio, String datafim, int nota) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
@@ -41,7 +43,17 @@ public class tarefa implements Serializable {
         this.responsavel = responsavel;
         this.datainicio = datainicio;
         this.datafim = datafim;
+        this.nota = nota;
     }
+
+    public int getNota() {
+        return nota;
+    }
+
+    public void setNota(int nota) {
+        this.nota = nota;
+    }
+    
     
     
 

@@ -148,7 +148,7 @@ public class TarefaController {
 
         List<tarefa> listTarefas = list.List();
 
-        tarefas.addAttribute("result", "Tarefa iniciada");
+        tarefas.addAttribute("result", "Tarefa concluída");
 
         tarefas.addAttribute("tarefas", listTarefas);
 
