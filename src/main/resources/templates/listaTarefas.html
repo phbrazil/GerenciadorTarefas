@@ -48,6 +48,9 @@
                         <td th:text="${tarefa.datafim}" />
                         <td align='center'>
                             <div class="row">
+                                <div th:if="${tarefa.status == 'Finalizada'}" class='mb-2'>
+                                    <span th:text="'Tarefa finalizada com nota '+${tarefa.nota}" class='text-muted'></span>
+                                </div>
                                 <div th:if="${tarefa.status == 'Não iniciada'}" class='mb-2'>
                                     <form th:action="@{/iniciarTarefa}"  th:object="${tarefa}" method="post">
                                         <input type="hidden" name="id" th:value="${tarefa.id}" />
